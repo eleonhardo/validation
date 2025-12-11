@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "5e2c8b71-7a21-4c7e-9c27-aaa22d1f1000",
+    "name": "Xxx API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Xxx",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"test-xxx\",\n  \"yyyId\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs"]
+        }
+      }
+    },
+    {
+      "name": "Get All Xxx",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs"]
+        }
+      }
+    },
+    {
+      "name": "Get Xxx by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs/{{id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs", "{{id}}"]
+        }
+      },
+      "variable": [
+        {
+          "key": "id",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "Update Xxx",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"updated-name\",\n  \"yyyId\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs/{{id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs", "{{id}}"]
+        }
+      },
+      "variable": [
+        {
+          "key": "id",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "Delete Xxx",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs/{{id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs", "{{id}}"]
+        }
+      },
+      "variable": [
+        {
+          "key": "id",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}
