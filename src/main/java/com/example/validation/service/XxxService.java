@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.validation.web.XxxCreateRequest;
+import com.example.validation.web.XxxUpdateRequest;
 
 import jakarta.validation.Valid;
 
@@ -35,10 +36,9 @@ public class XxxService {
 		return repository.save(entity);
 	}
 
-	public Xxx update(Long id, @Valid XxxCreateRequest xxxUpdateRequest) {
+	public Xxx update(Long id, @Valid XxxUpdateRequest xxxUpdateRequest) {
 		Xxx existing = findById(id);
 		existing.setName(xxxUpdateRequest.getName());
-		existing.setYyyId(xxxUpdateRequest.getYyyId());
 		return repository.save(existing);
 	}
 

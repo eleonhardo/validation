@@ -64,7 +64,7 @@ public class XxxController {
 	}
 
 	@PutMapping("/{id}")
-	public XxxResponse update(@PathVariable Long id, @Valid @RequestBody XxxCreateRequest xxxUpdateRequest) {
+	public XxxResponse update(@PathVariable Long id, @Valid @RequestBody XxxUpdateRequest xxxUpdateRequest) {
 		Xxx updated = service.update(id, xxxUpdateRequest);
 		return assembler.toModel(updated);
 	}

@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "5e2c8b71-7a21-4c7e-9c27-aaa22d1f1000",
-    "name": "Xxx API Collection",
+    "_postman_id": "b7e6c8b2-4a5f-4f7c-9f10-xxx-validation-api",
+    "name": "Xxx API (Validation + HATEOAS)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -17,7 +17,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"test-xxx\",\n  \"yyyId\": 1\n}"
+          "raw": "{\n  \"name\": \"first-xxx\",\n  \"yyyId\": 1\n}"
         },
         "url": {
           "raw": "http://localhost:8080/api/xxxs",
@@ -42,6 +42,25 @@
       }
     },
     {
+      "name": "Search Xxx by Name",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/xxxs/search?term={{term}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "xxxs", "search"],
+          "query": [
+            {
+              "key": "term",
+              "value": "first"
+            }
+          ]
+        }
+      }
+    },
+    {
       "name": "Get Xxx by ID",
       "request": {
         "method": "GET",
@@ -61,7 +80,7 @@
       ]
     },
     {
-      "name": "Update Xxx",
+      "name": "Update Xxx (name only)",
       "request": {
         "method": "PUT",
         "header": [
@@ -72,7 +91,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"updated-name\",\n  \"yyyId\": 2\n}"
+          "raw": "{\n  \"name\": \"updated-xxx-name\"\n}"
         },
         "url": {
           "raw": "http://localhost:8080/api/xxxs/{{id}}",
