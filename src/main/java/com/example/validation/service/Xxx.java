@@ -1,12 +1,17 @@
 package com.example.validation.service;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class Xxx {
 
 	private Long id;
 
+	@NotBlank
 	private String name;
 
 	private Long yyyId;
+
+	private Long orderId;
 
 	public Long getId() {
 		return id;
@@ -30,5 +35,13 @@ public class Xxx {
 
 	public void setYyyId(Long yyyId) {
 		this.yyyId = yyyId;
+	}
+
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
 	}
 }

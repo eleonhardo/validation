@@ -33,6 +33,7 @@ public class XxxService {
 		Xxx entity = new Xxx();
 		entity.setName(request.getName());
 		entity.setYyyId(request.getYyyId());
+		entity.setOrderId(request.getOrderId());
 		return repository.save(entity);
 	}
 
